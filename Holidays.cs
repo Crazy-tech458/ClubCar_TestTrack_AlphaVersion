@@ -11,11 +11,11 @@ using MySql.Data.MySqlClient;
 
 namespace ClubCar_TestTrack_AlphaVersion
 {
-    public partial class Club_Car_Test_Track_Alpha_Version : Form
+    public partial class Holidays : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
         MySqlCommand command;
-        public Club_Car_Test_Track_Alpha_Version()
+        public Holidays()
         {
             InitializeComponent();
         }
@@ -65,32 +65,11 @@ namespace ClubCar_TestTrack_AlphaVersion
                 closedConnection();
             }
         }
-        //Submit Button
+
         private void Submit_Button_Click(object sender, EventArgs e)
         {
-            string insertQuery = "INSERT INTO clubcar.car(carID, carType, projectName, carRequestedMiles, startDate, needDate, maxMilesDay, requestor) VALUES('" + txb_carID.Text + "','" + txb_Car_Type.Text + "','" + txb_Project_Name.Text + "','" + txb_Car_Requested_Miles.Text + "','" + DTP_StartDate.Value + "','" + DTP_NeedDate+ "','" + txb_Max_Miles_Day.Text + "','" + txb_Requestor.Text + "')";
+            string insertQuery = "INSERT INTO clubcar.holidays(HolidaysDate, HolidayName) VALUES('" + txb_Holidays_Date.Text + "','" + txb_Holiday_Name.Text + "')";
             executeQuery(insertQuery);
-
-            Employees f1 = new Employees();
-            f1.Show();
-        }
-        //Update Button
-        private void Update_Button_Click(object sender, EventArgs e)
-        {
-            string updateQuery = "UPDATE clubcar.car SET " +
-              "carType='" + txb_Car_Type.Text + "', " +
-              "projectName='" + txb_Project_Name.Text + "', " +
-             "carRequestedMiles='" + txb_Car_Requested_Miles.Text + "', " +
-             "maxMilesDay='" + txb_Max_Miles_Day.Text + "', " +
-             "requestor='" + txb_Requestor.Text + "' " +
-             "WHERE carID='" + txb_carID.Text + "'";
-            executeQuery(updateQuery);
-        }
-        //Delete Button
-        private void Delete_Button_Click(object sender, EventArgs e)
-        {
-            string deleteQuery = "DELETE FROM clubcar.car WHERE carID = " + txb_carID.Text;
-            executeQuery(deleteQuery);
         }
     }
 }

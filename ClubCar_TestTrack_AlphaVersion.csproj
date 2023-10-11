@@ -104,10 +104,28 @@
     <Compile Include="ClubCar_Car_Test_Information.Designer.cs">
       <DependentUpon>ClubCar_Car_Test_Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Holidays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays.Designer.cs">
+      <DependentUpon>Holidays.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ClubCar_Car_Test_Information.resx">
       <DependentUpon>ClubCar_Car_Test_Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays.resx">
+      <DependentUpon>Holidays.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
