@@ -46,7 +46,7 @@ namespace ClubCar_TestTrack_AlphaVersion
             this.Submit_Button.Name = "Submit_Button";
             this.Submit_Button.Size = new System.Drawing.Size(124, 39);
             this.Submit_Button.TabIndex = 0;
-            this.Submit_Button.Text = "Submit";
+            this.Submit_Button.Text = "Next";
             this.Submit_Button.UseVisualStyleBackColor = true;
             this.Submit_Button.Click += new System.EventHandler(this.Submit_Button_Click);
             // 

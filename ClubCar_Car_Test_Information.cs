@@ -70,15 +70,14 @@ namespace ClubCar_TestTrack_AlphaVersion
         {
             string insertQuery = "INSERT INTO clubcar.car(carID, carType, projectName, carRequestedMiles, startDate, needDate, maxMilesDay, requestor) VALUES('" + txb_carID.Text + "','" + txb_Car_Type.Text + "','" + txb_Project_Name.Text + "','" + txb_Car_Requested_Miles.Text + "','" + DTP_StartDate.Value + "','" + DTP_NeedDate.Value + "','" + txb_Max_Miles_Day.Text + "','" + txb_Requestor.Text + "')";
             executeQuery(insertQuery);
-
             // Create an instance of the Employees form
-            Employees Employees = new Employees();
+          //  Employees Employees = new Employees();
 
             // Hide the current form
-            this.Hide();
+          //  this.Hide();
 
             // Show the Employees form
-            Employees.Show();
+           // Employees.Show();
         }
         //Update Button
         private void Update_Button_Click(object sender, EventArgs e)

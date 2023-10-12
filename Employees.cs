@@ -70,6 +70,14 @@ namespace ClubCar_TestTrack_AlphaVersion
         {
             string insertQuery = "INSERT INTO clubcar.employee(employeeName, employeeType) VALUES('" + txb_Employee_Name.Text + "','" + txb_Employee_Type.Text + "')";
             executeQuery(insertQuery);
+            // Create an instance of the Holidays form
+            Holidays holidaysForm = new Holidays();
+
+            // Hide the current form
+            this.Hide();
+
+            // Show the Holidays form
+            holidaysForm.Show();
         }
         //Update Button
         private void Button_Update_Click(object sender, EventArgs e)

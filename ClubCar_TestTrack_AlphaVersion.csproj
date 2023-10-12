@@ -116,14 +116,20 @@
     <Compile Include="Holidays.Designer.cs">
       <DependentUpon>Holidays.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login_ClubCar.cs">
+    <Compile Include="Main_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_ClubCar.Designer.cs">
-      <DependentUpon>Login_ClubCar.cs</DependentUpon>
+    <Compile Include="Main_Menu.Designer.cs">
+      <DependentUpon>Main_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Track.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Track.Designer.cs">
+      <DependentUpon>Track.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ClubCar_Car_Test_Information.resx">
       <DependentUpon>ClubCar_Car_Test_Information.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,8 +139,8 @@
     <EmbeddedResource Include="Holidays.resx">
       <DependentUpon>Holidays.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login_ClubCar.resx">
-      <DependentUpon>Login_ClubCar.cs</DependentUpon>
+    <EmbeddedResource Include="Main_Menu.resx">
+      <DependentUpon>Main_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +151,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Track.resx">
+      <DependentUpon>Track.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

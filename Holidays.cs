@@ -68,8 +68,16 @@ namespace ClubCar_TestTrack_AlphaVersion
 
         private void Submit_Button_Click(object sender, EventArgs e)
         {
-            string insertQuery = "INSERT INTO clubcar.holidays(HolidaysDate, HolidayName) VALUES('" + txb_Holidays_Date.Text + "','" + txb_Holiday_Name.Text + "')";
-            executeQuery(insertQuery);
+          //  string insertQuery = "INSERT INTO clubcar.holidays(HolidaysDate, HolidayName) VALUES('" + txb_Holidays_Date.Text + "','" + txb_Holiday_Name.Text + "')";
+           // executeQuery(insertQuery);
+            // Create an instance of the Holidays form
+            Track TrackForm = new Track();
+
+            // Hide the current form
+            this.Hide();
+
+            // Show the Holidays form
+           TrackForm.Show();
         }
     }
 }
