@@ -116,6 +116,12 @@
     <Compile Include="Holidays.Designer.cs">
       <DependentUpon>Holidays.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login_ClubCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_ClubCar.Designer.cs">
+      <DependentUpon>Login_ClubCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ClubCar_Car_Test_Information.resx">
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Holidays.resx">
       <DependentUpon>Holidays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_ClubCar.resx">
+      <DependentUpon>Login_ClubCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

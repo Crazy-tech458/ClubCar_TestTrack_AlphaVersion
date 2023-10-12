@@ -11,15 +11,14 @@ using MySql.Data.MySqlClient;
 
 namespace ClubCar_TestTrack_AlphaVersion
 {
-    public partial class Club_Car_Test_Track_Alpha_Version : Form
+    public partial class Login_ClubCar : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
         MySqlCommand command;
-        public Club_Car_Test_Track_Alpha_Version()
+        public Login_ClubCar()
         {
             InitializeComponent();
         }
-        // Opens SQL Connection
         public void openConnection()
         {
             if (connection.State == ConnectionState.Closed)
@@ -45,7 +44,7 @@ namespace ClubCar_TestTrack_AlphaVersion
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected == 1)
                 {
-                    MessageBox.Show("Submitted");
+                   
                 }
                 else if (rowsAffected == 0)
                 {
@@ -64,42 +63,26 @@ namespace ClubCar_TestTrack_AlphaVersion
             {
                 closedConnection();
             }
+
         }
-        //Submit Button
-        private void Submit_Button_Click(object sender, EventArgs e)
+        //Login Button
+        private void bttn_Login_Click(object sender, EventArgs e)
         {
-            string insertQuery = "INSERT INTO clubcar.car(carID, carType, projectName, carRequestedMiles, startDate, needDate, maxMilesDay, requestor) VALUES('" + txb_carID.Text + "','" + txb_Car_Type.Text + "','" + txb_Project_Name.Text + "','" + txb_Car_Requested_Miles.Text + "','" + DTP_StartDate.Value + "','" + DTP_NeedDate.Value + "','" + txb_Max_Miles_Day.Text + "','" + txb_Requestor.Text + "')";
+            string insertQuery = "INSERT INTO clubcar.employeelogin(username, password) VALUES('" + txb_Username.Text + "','" + txb_Password.Text + "')";
             executeQuery(insertQuery);
 
-            // Create an instance of the Employees form
-            Employees Employees = new Employees();
-
-            // Hide the current form
-            this.Hide();
-
-            // Show the Employees form
-            Employees.Show();
+            Club_Car_Test_Track_Alpha_Version mainForm = new Club_Car_Test_Track_Alpha_Version();
+            this.Hide(); // Hide the login form
+            mainForm.Show(); // Show the main application form
         }
-        //Update Button
-        private void Update_Button_Click(object sender, EventArgs e)
+        //Clear Button
+        private void bttn_Clear_Click(object sender, EventArgs e)
         {
-            string updateQuery = "UPDATE clubcar.car SET " +
-              "carType='" + txb_Car_Type.Text + "', " +
-              "projectName='" + txb_Project_Name.Text + "', " +
-             "carRequestedMiles='" + txb_Car_Requested_Miles.Text + "', " +
-             "maxMilesDay='" + txb_Max_Miles_Day.Text + "', " +
-             "requestor='" + txb_Requestor.Text + "' " +
-             "WHERE carID='" + txb_carID.Text + "'";
-            executeQuery(updateQuery);
-        }
-        //Delete Button
-        private void Delete_Button_Click(object sender, EventArgs e)
-        {
-            string deleteQuery = "DELETE FROM clubcar.car WHERE carID = " + txb_carID.Text;
-            executeQuery(deleteQuery);
+            txb_Username.Text = "";
+            txb_Password.Text = "";
         }
         //Exit Button
-        private void Exit_Button_Click(object sender, EventArgs e)
+        private void bttn_Exit_Click(object sender, EventArgs e)
         {
             const string message = "Do you want to exit? Any unsubmitted information may be losted.";
             const string caption = "EXIT";

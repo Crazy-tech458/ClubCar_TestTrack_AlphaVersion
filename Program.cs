@@ -16,7 +16,7 @@ namespace ClubCar_TestTrack_AlphaVersion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Club_Car_Test_Track_Alpha_Version());
+            Application.Run(new Login_ClubCar());
         }
     }
 }

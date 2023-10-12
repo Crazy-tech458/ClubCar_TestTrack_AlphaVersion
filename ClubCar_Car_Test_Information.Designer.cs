@@ -92,6 +92,7 @@ namespace ClubCar_TestTrack_AlphaVersion
             this.Exit_Button.TabIndex = 3;
             this.Exit_Button.Text = "Exit";
             this.Exit_Button.UseVisualStyleBackColor = true;
+            this.Exit_Button.Click += new System.EventHandler(this.Exit_Button_Click);
             // 
             // label1
             // 
